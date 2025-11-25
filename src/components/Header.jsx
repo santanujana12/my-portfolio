@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <header className="glass-header px-4 md:px-8 py-4 md:py-6">
             <div className="text-xl md:text-2xl font-bold text-gradient">
-                Santanu Jana
+                Welcome to my Portfolio
             </div>
 
             {/* Desktop Navigation */}
