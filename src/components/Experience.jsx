@@ -42,18 +42,18 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-24 px-8 max-w-1000px mx-auto">
+        <section id="experience" className="py-12 md:py-24 px-4 md:px-8 max-w-1000px mx-auto">
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-3xl mb-12 flex items-center text-[var(--text-color)]"
+                className="text-2xl md:text-3xl mb-8 md:mb-12 flex items-center text-[var(--text-color)]"
             >
                 <span className="text-[var(--primary-color)] mr-2">02.</span> Where I've Worked
                 <span className="h-px bg-[var(--glass-border)] flex-1 ml-4"></span>
             </motion.h2>
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-6 md:gap-12">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
@@ -61,23 +61,23 @@ const Experience = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="card-glow p-8 border-l-2 border-l-[var(--primary-color)]"
+                        className="card-glow p-4 md:p-8 border-l-2 border-l-[var(--primary-color)]"
                     >
-                        <div className="flex justify-between flex-wrap mb-2">
-                            <h3 className="text-2xl text-[var(--text-color)] m-0">{exp.role}</h3>
-                            <span className="text-[var(--text-secondary)] font-mono">{exp.duration}</span>
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:flex-wrap gap-2 mb-2">
+                            <h3 className="text-xl md:text-2xl text-[var(--text-color)] m-0">{exp.role}</h3>
+                            <span className="text-sm md:text-base text-[var(--text-secondary)] font-mono">{exp.duration}</span>
                         </div>
-                        <h4 className="text-lg text-[var(--primary-color)] mt-1 mb-4">@ {exp.company}</h4>
+                        <h4 className="text-base md:text-lg text-[var(--primary-color)] mt-1 mb-3 md:mb-4">@ {exp.company}</h4>
                         <ul className="list-none p-0 m-0">
                             {exp.description.map((item, i) => (
-                                <li key={i} className="relative pl-5 mb-2 text-[var(--text-secondary)] leading-relaxed">
+                                <li key={i} className="relative pl-5 mb-2 text-sm md:text-base text-[var(--text-secondary)] leading-relaxed">
                                     <span className="absolute left-0 text-[var(--primary-color)]">▹</span> {item}
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-4 flex flex-wrap gap-2">
+                        <div className="mt-3 md:mt-4 flex flex-wrap gap-2">
                             {exp.tech.map((t, i) => (
-                                <span key={i} className="text-xs font-mono text-[var(--text-secondary)] bg-[var(--glass-bg)] px-2 py-1 rounded">
+                                <span key={i} className="text-[10px] md:text-xs font-mono text-[var(--text-secondary)] bg-[var(--glass-bg)] px-2 py-1 rounded">
                                     {t}
                                 </span>
                             ))}

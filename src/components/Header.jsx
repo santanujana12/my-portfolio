@@ -12,8 +12,8 @@ const Header = () => {
     };
 
     return (
-        <header className="glass-header">
-            <div className="text-2xl font-bold text-gradient">
+        <header className="glass-header px-4 md:px-8 py-4 md:py-6">
+            <div className="text-xl md:text-2xl font-bold text-gradient">
                 Santanu Jana
             </div>
 
@@ -27,7 +27,7 @@ const Header = () => {
             </nav>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden bg-transparent border-none text-[var(--text-color)] text-2xl cursor-pointer p-2" onClick={toggleMenu} aria-label="Toggle menu">
+            <button className="md:hidden bg-transparent border-none text-[var(--text-color)] text-2xl cursor-pointer p-3 min-w-11 min-h-11" onClick={toggleMenu} aria-label="Toggle menu">
                 {isOpen ? '✕' : '☰'}
             </button>
 
@@ -35,18 +35,27 @@ const Header = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.nav
-                        className="fixed top-0 right-0 w-full h-screen bg-[var(--bg-color)] flex flex-col justify-center items-center z-999"
+                        className="fixed top-0 right-0 w-full h-screen bg-[var(--bg-color)] flex flex-col justify-center items-center z-9999"
                         initial="closed"
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
                     >
+                        {/* Close Button */}
+                        <button
+                            className="absolute top-6 right-6 bg-transparent border-none text-[var(--text-color)] text-3xl cursor-pointer p-3 min-w-11 min-h-11 z-10000"
+                            onClick={toggleMenu}
+                            aria-label="Close menu"
+                        >
+                            ✕
+                        </button>
+
                         <ul className="list-none p-0 text-center">
-                            <li className="my-8"><a href="#hero" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline">Home</a></li>
-                            <li className="my-8"><a href="#about" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline">About</a></li>
-                            <li className="my-8"><a href="#experience" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline">Experience</a></li>
-                            <li className="my-8"><a href="#projects" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline">Projects</a></li>
-                            <li className="my-8"><a href="#contact" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline">Contact</a></li>
+                            <li className="my-8"><a href="#hero" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Home</a></li>
+                            <li className="my-8"><a href="#about" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">About</a></li>
+                            <li className="my-8"><a href="#experience" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Experience</a></li>
+                            <li className="my-8"><a href="#projects" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Projects</a></li>
+                            <li className="my-8"><a href="#contact" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Contact</a></li>
                         </ul>
                     </motion.nav>
                 )}
