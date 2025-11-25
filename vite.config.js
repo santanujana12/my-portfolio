@@ -4,5 +4,6 @@ import UnoCSS from 'unocss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/portfolio-repo/',
   plugins: [react(), UnoCSS()],
 })
