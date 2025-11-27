@@ -14,8 +14,11 @@ const Contact = () => {
                 <p className="text-[var(--text-secondary)] text-base md:text-xl leading-relaxed mb-8 md:mb-12">
                     I'm currently looking for new opportunities and would love to hear from you! Whether you have a job opportunity, a project collaboration, or just want to connect, feel free to reach out.
                 </p>
-                <a href="mailto:santanu.jana@aol.com" className="btn-primary text-sm md:text-base">
+                <a href="mailto:santanu.jana@aol.com" className="btn-primary text-sm md:text-base mr-2">
                     Say Hello
+                </a>
+                <a href="https://drive.google.com/file/d/1lMS7NFYN9WQ5xq4Vi7L7-hlpGJORjOVU/view?usp=drive_link" className="btn-primary text-sm md:text-base">
+                    Link to my Resume
                 </a>
             </motion.div>
         </section>
