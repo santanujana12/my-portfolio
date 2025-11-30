@@ -12,7 +12,7 @@ export default function ThemeToggle() {
             aria-label="Toggle theme"
         >
             <div
-                className={`w-6 h-6 rounded-full bg-white dark:bg-gray-800 shadow-md transform transition-transform duration-300 flex items-center justify-center ${theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
+                className={`w-6 h-6 rounded-full bg-white dark:bg-yellow-200 shadow-md transform transition-transform duration-300 flex items-center justify-center ${theme === 'dark' ? 'translate-x-7' : 'translate-x-0'
                     }`}
             >
                 {theme === 'dark' ? (
