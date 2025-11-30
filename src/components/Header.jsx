@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,7 @@ const Header = () => {
                 <li><a href="#experience" className="nav-link">Experience</a></li>
                 <li><a href="#projects" className="nav-link">Projects</a></li>
                 <li><a href="#contact" className="nav-link">Contact</a></li>
+                <li className="ml-8 flex items-center"><ThemeToggle /></li>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -56,6 +58,7 @@ const Header = () => {
                             <li className="my-8"><a href="#experience" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Experience</a></li>
                             <li className="my-8"><a href="#projects" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Projects</a></li>
                             <li className="my-8"><a href="#contact" onClick={toggleMenu} className="text-2xl text-[var(--text-color)] no-underline hover:text-[var(--primary-color)] transition-colors">Contact</a></li>
+                            <li className="my-8 flex justify-center"><ThemeToggle /></li>
                         </ul>
                     </motion.nav>
                 )}

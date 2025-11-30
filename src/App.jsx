@@ -6,9 +6,11 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+import { ThemeProvider } from './context/ThemeContext'
+
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <main>
         <Hero />
@@ -18,7 +20,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 
